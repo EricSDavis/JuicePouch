@@ -67,7 +67,6 @@ do
 	(filename=$i$filebase
 	for j in "${chrs[@]}"
 	do
-		#echo "resolution: " "$i" " chromosome: " "$j"
 		awk -v OFS="\t" -v a="$i" -v b="$j" 'BEGIN {print "vector", "normFactors", "chr"b, a, "BP"}' >> $filename
 	   	java -jar $juicer_tools dump norm $nrm $file "$j" BP "$i" >> $filename
 	done)&
