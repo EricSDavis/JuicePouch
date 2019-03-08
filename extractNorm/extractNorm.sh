@@ -4,7 +4,7 @@
 usage () {
 	echo '
      Description:
-	 This script calculates the normalization factors from a hic file for all chromosomes and resolutions.
+	 This script extracts the normalization factors from a hic file for all chromosomes and resolutions.
 
      Dependencies:
 	 java
@@ -17,7 +17,7 @@ usage () {
 	-o : file/out/path/.txt
 
      Example:
-	./calcNorm.sh -f MN_inter.hic -j juicer_tools.1.9.9_jcuda.0.8.jar -n KR -o normFactors.txt
+	./extractNorm.sh -f MN_inter.hic -j juicer_tools.1.9.9_jcuda.0.8.jar -n KR -o normFactors.txt
 	
 ' #| less
 
@@ -26,8 +26,8 @@ usage () {
 ## Define default values
 file_DEFAULT="inter_30.hic"
 nrm_DEFAULT="KR"
-juicer_tools_DEFAULT="/Users/eric/Downloads/juicer_tools.1.9.9_jcuda.0.8.jar"
-output_file_DEFAULT="/tmp/lure"
+juicer_tools_DEFAULT="juicer_tools.1.9.9_jcuda.0.8.jar"
+output_file_DEFAULT="."
 
 ## Parse command-line arguments with getopts
 while getopts f:j:n:o: ARGS;
