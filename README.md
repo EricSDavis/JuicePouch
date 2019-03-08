@@ -16,4 +16,4 @@ This script will calculate the normalization factors for a Hi-C file for all chr
 ##### Dependencies
 * [Java](https://www.java.com/en/)
 * [Juicer Tools](https://github.com/aidenlab/juicer/wiki/Download)
-* [.hic file]
+* .hic file
