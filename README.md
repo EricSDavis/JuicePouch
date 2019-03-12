@@ -24,4 +24,4 @@ This script extracts reads from a .hic file corresponding to a bedpe file using 
 #### Dependencies
 * [Straw API](https://github.com/aidenlab/straw/wiki)
 * .hic file
-*BEDPE formatted file
+* BEDPE formatted file
