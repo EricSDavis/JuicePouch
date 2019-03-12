@@ -1,13 +1,11 @@
 # JuicePouch
 
 ## Overview
-**********************
 
 JuicePouch is a collection of scripts that extend the functionality of Juicebox, straw, and Juicer Tools.
 
 
 ## Tools (At a glance)
-**********************
 
 ### extractNorm
 
