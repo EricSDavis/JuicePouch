@@ -1,5 +1,5 @@
 #!/usr/bin/python
-import argparse, straw, sys
+import argparse, strawC, sys
 import pandas as pd
 
 if __name__ == "__main__":
