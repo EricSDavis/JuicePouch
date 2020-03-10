@@ -35,7 +35,7 @@ if __name__ == "__main__":
    for h in hicFiles:
       for i in range(len(loops)):
          try:
-               loops.loc[i, h] = straw.straw(args.norm, h, pos1[i], pos2[i], 'BP', res[i])[2][0]
+               loops.loc[i, h] = strawC.strawC('NONE', h, pos1[i], pos2[i], 'BP', res[i])[0].counts
          except:
                loops.loc[i, h] = 0
                print('row {} in file {} was imputed with 0'.format(i,h), file=sys.stderr)

@@ -13,18 +13,24 @@ This script extracts reads from a list of `.hic` files corresponding to a bedpe 
 
 #### Usage
 
-1. Load python modules
+1. Load python modules:
     ```bash
     module load python/3.6.6
     ```
 
-2. Install required python libraries (i.e. straw)
+2. Install required python libraries (i.e. straw):
     ```bash
-    python3 -m pip install hic-straw
+    python3 -m pip install /proj/phanstiel_lab/software/straw/pybind11_python
     ```
-3. Launch `extractCounts.py` with a sbatch wrapper
+3. Launch `extractCounts.py` with a sbatch wrapper:
     ```bash
     sbatch -p general -t 1440 --wrap='python3 path/to/extractCounts.py -l <LOOPFILE> -f <HICFILES> -o <OUTFILE>'
+    ```
+    or run command in an interactive node:
+    ```bash
+    srun -t 5:00:00 -p interact -N 1 -n 1 --pty /bin/bash
+    module load python/3.6.6
+    python3 /proj/phanstiel_lab/software/JuicePouch/extractCounts/extractCounts.py -l <LOOPFILE> -f <HICFILES> -o <OUTFILE> 
     ```
     
     `<LOOPFILE>` is a BEDPE file (i.e. `.txt` or `.bedpe`)  
