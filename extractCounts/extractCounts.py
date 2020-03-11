@@ -41,4 +41,4 @@ if __name__ == "__main__":
             print('row {} in file {} was imputed with 0'.format(i,h), file=sys.stderr)
 
    # Write as tab-separate file
-   loops.to_csv(args.outFile, sep='\t')
+   loops.to_csv(args.outFile, sep='\t', index=False)
